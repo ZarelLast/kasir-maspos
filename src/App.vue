@@ -7,5 +7,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DefaultLayout from './layouts/DefaultLayout.vue'
+export default {
+  name: 'App',
+  computed: {
+    layout(){
+      return DefaultLayout
+    }
+  }
+}
 </script>
