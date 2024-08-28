@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <component :is="layout">
+      <Navbar />
       <RouterView />
       <Button>Button</Button>
       <ButtonPrimary>Button Primary</ButtonPrimary>

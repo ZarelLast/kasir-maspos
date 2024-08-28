@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="max-w-[200px] max-h-[300px] bg-white drop-shadow-md rounded-lg overflow-hidden"> -->
   <div class="max-w-[200px] max-h-[300px] shadow-[rgba(0,0,10,0.04)_4px_4px_4px_2px] bg-white rounded-lg overflow-hidden">
     <!-- Product Image -->
     <img class="w-full h-[165px] object-cover" src="https://via.placeholder.com/300" alt="Product Image">
