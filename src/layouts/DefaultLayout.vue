@@ -1,5 +1,4 @@
 <template>
-  test
   <slot />
 </template>
 

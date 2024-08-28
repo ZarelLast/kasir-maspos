@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{html,js,vue}"],
-  theme: {
-    extend: {},
-  },
+module.exports = {
+  content: [
+      './src/views/**/*.vue',
+      './src/views/*.vue',
+      './src/components/*.vue',
+      './src/components/**/*.vue',
+      './src/views/*.vue',
+      './src/views/**/*.vue',
+      './src/layouts/*.vue',
+      './src/**/*.{vue,js,ts,jsx,tsx}',
+  ], 
   plugins: [],
-}
-
+};
