@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-4 px-8 bg-white sm:bg-blue-500 sm:px-4 sm:text-white">
+  <nav class="py-4 px-8 bg-white sm:bg-blue-600 sm:px-4 sm:text-white">
     <div class="container mx-auto flex items-center justify-between">
 
       <!-- Logo -->
@@ -7,7 +7,11 @@
         <a href="#">MASPOS</a>
       </div>
 
-      <div class="flex items-center space-x-4">
+      
+      <div v-if="currentPath == '/login'" class="flex items-center space-x-4">
+        <a class="font-base text-normal" href="tel:+628171902092">Call Us  +62 817-1902-092</a>
+      </div>
+      <div v-else class="flex items-center space-x-4">
         <div class="sm:hidden">
           <i class="ri-search-line"></i>
         </div>
@@ -20,3 +24,13 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  computed:{
+    currentPath() {
+      return this.$route.path;
+    },
+  } 
+}
+</script>
