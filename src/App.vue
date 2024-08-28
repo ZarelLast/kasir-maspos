@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-stone-100 w-screen h-screen">
     <component :is="layout">
       <Navbar />
       <RouterView />
@@ -8,6 +8,7 @@
       <ButtonLink>Button Link</ButtonLink>
       <ButtonDanger>Button Danger</ButtonDanger>
       <Product></Product>
+      <CartItem></CartItem>
     </component>
   </div>
 </template>

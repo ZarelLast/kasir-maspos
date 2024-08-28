@@ -8,7 +8,7 @@
       <!-- Product Name and Delete Button -->
       <div class="flex justify-between items-center">
         <h2 class="text-sm font-medium">Product Name</h2>
-        <ButtonDanger class="font-medium text-[0.6rem] px-1 py-0">Delete</ButtonDanger>
+        <ButtonDanger class="font-base text-xs px-1 py-0">Delete</ButtonDanger>
       </div>
 
       <!-- Product Price -->
