@@ -2,10 +2,11 @@
   <div id="app">
     <component :is="layout">
       <RouterView />
-      <ButtonPrimary>Button 1</ButtonPrimary>
-      <ButtonLink>Button 2</ButtonLink>
-      <ButtonDanger>Button 3</ButtonDanger>
-      <div class="border bg-blue-400"> 200</div>
+      <Button>Button</Button>
+      <ButtonPrimary>Button Primary</ButtonPrimary>
+      <ButtonLink>Button Link</ButtonLink>
+      <ButtonDanger>Button Danger</ButtonDanger>
+      <Product></Product>
     </component>
   </div>
 </template>
