@@ -18,6 +18,7 @@ function request(method) {
     };
 
     if (body) {
+      console.log('typecontent', contentType)
       if (contentType == 'application/json') {
         requestOptions.headers['Content-Type'] = 'application/json';
         requestOptions.data = JSON.stringify(body);

@@ -18,8 +18,9 @@ export const useCategoryStore = defineStore({
 
       if (categories) {
         this.categories = categories.data
+        this.selected = this.categories[0].id
+        // console.log('set store category selected:', this.selected)
       }
-      console.log(this.categories)
     },
     async setCategorySelected(categoryId){
       this.selected = categoryId
@@ -28,7 +29,6 @@ export const useCategoryStore = defineStore({
       const category = await axiosWrapper.post(`${baseUrl}/category`, data, true);
 
       this.category = category.data
-
       return category
     },
     async update(id, data) {
