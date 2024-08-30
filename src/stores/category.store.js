@@ -26,7 +26,7 @@ export const useCategoryStore = defineStore({
       this.selected = categoryId
     },
     async add(data) {
-      const category = await axiosWrapper.post(`${baseUrl}/category`, data, true);
+      const category = await axiosWrapper.post(`${baseUrl}/category`, data, true, 'application/json', "Add Category Successful", "Add Category Failed, Please Try Again");
 
       this.category = category.data
       return category

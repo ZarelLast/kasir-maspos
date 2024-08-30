@@ -22,6 +22,9 @@ export const useCartStore = defineStore({
       }
       console.log(this.cartItems)
     },
+    getTotal(){
+      return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+    },
     increment(itemId) {
       const index = this.cartItems.findIndex(item => item.id == itemId)
       this.cartItems[index].quantity += 1
@@ -39,6 +42,8 @@ export const useCartStore = defineStore({
         this.cartItems.splice(index, 1)
       }
     },
-
+    done(){
+      this.cartItems = []
+    }
   },
 });

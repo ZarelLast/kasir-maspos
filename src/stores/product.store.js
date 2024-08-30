@@ -48,7 +48,8 @@ export const useProductStore = defineStore({
       }
     },
     async add(data) {
-      const product = await axiosWrapper.post(`${baseUrl}/product`, data, true, 'multipart/form-data');
+      const product = await axiosWrapper.post(`${baseUrl}/product`, data, true, 'multipart/form-data', "Add Product Successful", "Add Product Failed, Please Try Again");
+
       this.product = product.data
       this.fetch()
       this.groupProductsByCategory()

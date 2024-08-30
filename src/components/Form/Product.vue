@@ -10,17 +10,14 @@
               class="mx-auto h-full w-full object-cover rounded-lg" />
             <div class="text-center" :class="[previewImage ? 'hidden' : '']">
               <i class="ri-upload-cloud-line mx-auto text-blue-900"></i>
-              <div class="mt-4 flex text-sm leading-6 text-gray-600">
+              <div class="mt-4 flex text-sm leading-6">
                 <label for="file-upload"
-                  class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                  class="relative cursor-pointer font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                   <span>Upload image</span>
                   <!-- Input file untuk mengunggah gambar -->
                   <input id="file-upload" name="file-upload" type="file" class="hidden sr-only" @change="uploadImage" accept="image/*" />
                 </label>
-                <p class="pl-1">or drag and drop</p>
               </div>
-              <p class="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to
-                10MB</p>
             </div>
           </div>
         </div>
@@ -46,6 +43,7 @@
             <div class="mt-2">
               <select id="category_id" name="category_id" v-model="formData.category_id"
                 class="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option selected disabled >Pilih Kategori</option>
                 <option v-for="category in categoryStore.categories" :value="category.id" :key="category.id">
                   {{category.name }}
                 </option>

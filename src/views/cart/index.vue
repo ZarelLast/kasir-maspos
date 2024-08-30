@@ -22,6 +22,7 @@
     <div class="flex flex-col gap-4 sm:gap-0">
       <CartItem v-for="item in cartStore.cartItems" :item="item"></CartItem>
     </div>
+    <Menubar />
   </div>
 </template>
 

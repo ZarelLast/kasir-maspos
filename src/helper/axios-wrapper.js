@@ -10,7 +10,7 @@ export const axiosWrapper = {
 };
 
 function request(method) {
-  return (url, body, notification = false, contentType = 'application/json') => {
+  return (url, body, notification = false, contentType = 'application/json', successMessage=null, errorMessage=null) => {
     const requestOptions = {
       url,
       method,
@@ -31,7 +31,8 @@ function request(method) {
     return axios(requestOptions)
       .then((response) => {
         if(notification){
-          toast(response.data.message, {
+          const message = successMessage || response.data.message;
+          toast(message, {
             autoClose: 2000,
             type: 'success',
             position: toast.POSITION.BOTTOM_RIGHT,
@@ -43,7 +44,7 @@ function request(method) {
         return response.data
 
       }, (error) => {
-        return errorHandler(error);
+        return errorHandler(error, errorMessage);
       });
   };
 }
@@ -84,6 +85,7 @@ function errorHandler(error) {
       message = error.message
     }
   }
+  message = errorMessage || message
 
   toast(message, {
     autoClose: 2000,
